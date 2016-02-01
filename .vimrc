@@ -68,6 +68,6 @@ filetype plugin indent on    " required
 
 augroup ProjectSetup
   au!
-  au BufRead,BufEnter ~/Dropbox/Competitive_Programming/*  set shiftwidth=4
+  au BufRead,BufEnter ~/odrive/Dropbox/Competitive_Programming/*  set shiftwidth=4
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
 augroup END
