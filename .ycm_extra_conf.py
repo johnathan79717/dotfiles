@@ -84,6 +84,8 @@ flags = [
 '.',
 '-I',
 './ClangCompleter',
+'-I',
+'/Users/jonathan/odrive/Dropbox/Competitive_Programming/DCJ/dcj_mac_os/includes',
 '-isystem',
 './tests/gmock/gtest',
 '-isystem',

@@ -15,7 +15,7 @@ syntax on
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'c'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set shiftwidth=2
+set shiftwidth=4
 set expandtab " convert tab to spaces
 set smarttab
 set nu
@@ -31,6 +31,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'vim-scripts/localrc.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
@@ -69,5 +70,4 @@ filetype plugin indent on    " required
 augroup ProjectSetup
   au!
   au BufRead,BufEnter ~/odrive/Dropbox/Competitive_Programming/*  set shiftwidth=4
-  au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
 augroup END
