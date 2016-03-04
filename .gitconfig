@@ -10,4 +10,4 @@ required = true
 [merge]
 tool = meld
 [core]
-excludesfile = /Users/jonathan/.gitignore_global
+excludesfile = ~/.gitignore_global
