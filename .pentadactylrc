@@ -5,10 +5,10 @@ group user
 set guioptions=bCrsT
 set hintkeys=asdfg;lkjh
 set passkeys=
-set passkeys+=mail.google.com:j,k,?,o,p,n,s
+set passkeys+=mail.google.com:j,k,?,o,p,n,s,u
 set passkeys+=facebook.com:o,j,k,l,c
 set passkeys+=docs.google.com:*
-set passkeys+=.*:<CR>
+set passkeys+=.*:<CR>,C-c
 map K gt
 map J gT
 
