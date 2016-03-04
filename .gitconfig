@@ -11,3 +11,5 @@ required = true
 tool = meld
 [core]
 excludesfile = ~/.gitignore_global
+[push]
+	default = simple
