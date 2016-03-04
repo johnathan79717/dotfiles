@@ -1,0 +1,13 @@
+[color]
+ui = auto
+[user]
+name = Jonathan Hao
+email = johnathan79717@gmail.com
+[filter "media"]
+clean = git media clean %f
+smudge = git media smudge %f
+required = true
+[merge]
+tool = meld
+[core]
+excludesfile = /Users/jonathan/.gitignore_global
