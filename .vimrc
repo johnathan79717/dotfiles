@@ -72,4 +72,5 @@ augroup ProjectSetup
   au BufRead,BufEnter ~/odrive/Dropbox/Competitive_Programming/*  set shiftwidth=4
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
   au BufRead,BufEnter *.sjs setf javascript
+  au BufRead,BufEnter *.jsm setf javascript
 augroup END
