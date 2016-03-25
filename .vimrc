@@ -32,6 +32,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'vim-scripts/localrc.vim'
+Plugin 'neovimhaskell/haskell-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
