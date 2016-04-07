@@ -21,6 +21,7 @@ crecord = /Users/jonathan/.hgext/crecord
 hgext.extdiff = 
 bundleclone = /Users/jonathan/.mozbuild/version-control-tools/hgext/bundleclone
 push-to-try = /Users/jonathan/.mozbuild/version-control-tools/hgext/push-to-try
+evolve = ~/Workspace/evolve-main/hgext/evolve.py
 [extdiff]
 cmd.meld = 
 [mqext]

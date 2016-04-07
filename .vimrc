@@ -74,4 +74,9 @@ augroup ProjectSetup
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
+  au BufRead,BufEnter *.rb set shiftwidth=2
 augroup END
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
