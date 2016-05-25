@@ -1,3 +1,4 @@
+set colorcolumn=80
 set ff=unix
 map <c-y><c-f> :YcmCompleter FixIt<CR>
 let g:ycm_always_populate_location_list = 1
@@ -35,8 +36,10 @@ Plugin 'vim-scripts/localrc.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ternjs/tern_for_vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -71,6 +74,7 @@ filetype plugin indent on    " required
 augroup ProjectSetup
   au!
   au BufRead,BufEnter ~/Workspace/mozilla-central/*  set shiftwidth=2
+  au BufRead,BufEnter ~/mozilla-central/*  set shiftwidth=2
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
