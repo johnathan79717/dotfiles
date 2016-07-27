@@ -1,4 +1,36 @@
-set colorcolumn=80
+"set colorcolumn=80
+set hidden
+
+" Mappings to access buffers (don't use "\p" because a
+" delay before pressing "p" would accidentally paste).
+" \l       : list buffers
+" \b \f \g : go back/forward/last-used
+" \1 \2 \3 : go to buffer 1/2/3 etc
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+" It's useful to show the buffer number in the status line.
+"set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+map <c-p> :FZF<CR>
+
+set rtp+=/usr/local/opt/fzf
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 set ff=unix
 map <c-y><c-f> :YcmCompleter FixIt<CR>
 let g:ycm_always_populate_location_list = 1
@@ -8,14 +40,17 @@ set smartcase
 let g:ycm_autoclose_preview_window_after_insertion = 1
 map <c-n> :NERDTreeToggle %<CR>
 set hlsearch
+
 filetype plugin on
 let g:ycm_global_ycm_extra_conf ='~/.vim/.ycm_extra_conf.py'
 set smartindent
 set backspace=indent,eol,start
 syntax on
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 'c'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"let g:ctrlp_cmd = 'CtrlPMixed'
+"let g:ctrlp_working_path_mode = 'c'
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 set shiftwidth=4
 set expandtab " convert tab to spaces
 set smarttab
@@ -32,6 +67,9 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+"Plugin 'junegunn/fzf'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'gmarik/Vundle.vim'
@@ -74,7 +112,7 @@ filetype plugin indent on    " required
 augroup ProjectSetup
   au!
   au BufRead,BufEnter ~/Workspace/mozilla-central/*  set shiftwidth=2
-  au BufRead,BufEnter ~/mozilla-central/*  set shiftwidth=2
+  au BufRead,BufEnter ~/gecko/*  set shiftwidth=2
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
