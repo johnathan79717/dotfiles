@@ -9,7 +9,7 @@ set passkeys+=mail.google.com:j,k,?,o,p,n,s,u
 set passkeys+=facebook.com:o,j,k,l,c
 set passkeys+=docs.google.com:*
 set passkeys+=.*:<CR>,C-c
-map K gt
-map J gT
+map J gt
+map K gT
 
 " vim: set ft=pentadactyl:

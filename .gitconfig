@@ -13,3 +13,14 @@ tool = meld
 excludesfile = ~/.gitignore_global
 [push]
 	default = simple
+[bz]
+	username = jhao@mozilla.com
+	apikey = 9QaAUtPBtIMLUCNnfRdMkNNxmqqlcV2jqPBQb293
+[mozreview]
+	nickname = jhao
+[pager]
+  log = diff-so-fancy | less
+  show = diff-so-fancy | less
+  diff = diff-so-fancy | less
+[stgit]
+  pager = diff-so-fancy | less

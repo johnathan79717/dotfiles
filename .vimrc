@@ -1,4 +1,5 @@
-"set colorcolumn=80
+let g:ycm_rust_src_path = '~/Workspace/rustc-1.13.0/src'
+set colorcolumn=81
 set hidden
 
 " Mappings to access buffers (don't use "\p" because a
@@ -51,11 +52,11 @@ syntax on
 "let g:ctrlp_working_path_mode = 'c'
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set shiftwidth=4
+set shiftwidth=2
 set expandtab " convert tab to spaces
 set smarttab
 set nu
-set clipboard=unnamedplus,unnamed
+set clipboard=unnamed
 set shell=/bin/bash
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -68,16 +69,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 "Plugin 'junegunn/fzf'
+Plugin 'rust-lang/rust.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/localrc.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ternjs/tern_for_vim'
+"Plugin 'ternjs/tern_for_vim'
+Plugin 'othree/yajs.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -111,12 +113,10 @@ filetype plugin indent on    " required
 
 augroup ProjectSetup
   au!
-  au BufRead,BufEnter ~/Workspace/mozilla-central/*  set shiftwidth=2
-  au BufRead,BufEnter ~/gecko/*  set shiftwidth=2
   au BufRead,BufEnter *.gdb set expandtab! shiftwidth=8
+  "au BufRead,BufEnter ~/Workspace/competitive-programming/* set shiftwidth=4
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
-  au BufRead,BufEnter *.rb set shiftwidth=2
 augroup END
 
 set backupdir=~/.vim/backup//
