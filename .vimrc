@@ -11,16 +11,21 @@ nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>01 :1b<CR>
+nnoremap <Leader>02 :2b<CR>
+nnoremap <Leader>03 :3b<CR>
+nnoremap <Leader>04 :4b<CR>
+nnoremap <Leader>05 :5b<CR>
+nnoremap <Leader>06 :6b<CR>
+nnoremap <Leader>07 :7b<CR>
+nnoremap <Leader>08 :8b<CR>
+nnoremap <Leader>09 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
+let i = 1
+while i < 100
+  execute "nnoremap <Leader>" . i . " :" . i . "b<CR>"
+  let i += 1
+endwhile
 " It's useful to show the buffer number in the status line.
 "set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
