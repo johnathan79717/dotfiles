@@ -85,6 +85,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin 'ternjs/tern_for_vim'
 Plugin 'othree/yajs.vim'
+Plugin 'fatih/vim-go'
+Plugin 'easymotion/vim-easymotion'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -122,6 +124,7 @@ augroup ProjectSetup
   "au BufRead,BufEnter ~/Workspace/competitive-programming/* set shiftwidth=4
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
+  au BufRead,BufEnter *.go set expandtab! shiftwidth=8
 augroup END
 
 set backupdir=~/.vim/backup//
