@@ -1,15 +1,19 @@
+let @y = 'ggyGG'
 let g:ycm_rust_src_path = '~/Workspace/rustc-1.13.0/src'
 set colorcolumn=81
 set hidden
+
+let mapleader = "\<Space>"
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
 " \l       : list buffers
 " \b \f \g : go back/forward/last-used
 " \1 \2 \3 : go to buffer 1/2/3 etc
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>p :bp<CR>
+nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>01 :1b<CR>
 nnoremap <Leader>02 :2b<CR>
@@ -125,6 +129,7 @@ augroup ProjectSetup
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
   au BufRead,BufEnter *.go set expandtab! shiftwidth=8
+  au BufRead,BufEnter *.py set expandtab! shiftwidth=2
 augroup END
 
 set backupdir=~/.vim/backup//
