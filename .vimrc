@@ -15,6 +15,7 @@ nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>p :bp<CR>
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>; :e#<CR>
 nnoremap <Leader>01 :1b<CR>
 nnoremap <Leader>02 :2b<CR>
 nnoremap <Leader>03 :3b<CR>
@@ -78,6 +79,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 "Plugin 'junegunn/fzf'
+"Plugin 'WolfgangMehner/perl-support'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
