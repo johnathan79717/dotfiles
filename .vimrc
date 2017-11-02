@@ -1,17 +1,33 @@
 let @y = 'ggyGG'
+let g:closetag_filenames = '*.html,*.js'
 let g:ycm_rust_src_path = '~/Workspace/rustc-1.13.0/src'
 set colorcolumn=81
 set hidden
-
 let mapleader = "\<Space>"
+
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_startofline = 0
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+nmap <Leader>s <Plug>(easymotion-s2)
+map <Leader> <Plug>(easymotion-prefix)
+map <Leader>f <Plug>(easymotion-bd-f)
+map <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
 " \l       : list buffers
 " \b \f \g : go back/forward/last-used
 " \1 \2 \3 : go to buffer 1/2/3 etc
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>l :ls<CR>
+"nnoremap <Leader>h :noh<CR>
+nnoremap <Leader><Leader>w :w<CR>
+"nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>p :bp<CR>
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>g :e#<CR>
@@ -50,7 +66,7 @@ set ignorecase
 set smartcase
 let g:ycm_autoclose_preview_window_after_insertion = 1
 map <c-n> :NERDTreeToggle %<CR>
-set hlsearch
+"set hlsearch
 
 filetype plugin on
 let g:ycm_global_ycm_extra_conf ='~/.vim/.ycm_extra_conf.py'
@@ -95,6 +111,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'othree/yajs.vim'
 Plugin 'fatih/vim-go'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'chemzqm/vim-jsx-improve'
+Plugin 'alvan/vim-closetag'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -133,7 +151,8 @@ augroup ProjectSetup
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
   au BufRead,BufEnter *.go set expandtab! shiftwidth=8
-  au BufRead,BufEnter *.py set expandtab! shiftwidth=2
+  au BufRead,BufEnter *.py set shiftwidth=4
+  au BufRead,BufEnter *.cc set shiftwidth=4
 augroup END
 
 set backupdir=~/.vim/backup//
