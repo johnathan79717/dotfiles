@@ -153,8 +153,9 @@ augroup ProjectSetup
   au BufRead,BufEnter *.sjs setf javascript
   au BufRead,BufEnter *.jsm setf javascript
   au BufRead,BufEnter *.go set expandtab! shiftwidth=8
-  au BufRead,BufEnter *.py set shiftwidth=4
   au BufRead,BufEnter *.cc set shiftwidth=4
+  au BufRead,BufEnter *.py set expandtab! shiftwidth=2
+  au BufRead,BufEnter *.pl set shiftwidth=4
 augroup END
 
 set backupdir=~/.vim/backup//
