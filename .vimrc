@@ -6,7 +6,7 @@ set hidden
 let mapleader = "\<Space>"
 
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_startofline = 0
+let g:EasyMotion_startofline = 1
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
@@ -14,7 +14,7 @@ map  N <Plug>(easymotion-prev)
 nmap <Leader>s <Plug>(easymotion-s2)
 map <Leader> <Plug>(easymotion-prefix)
 map <Leader>f <Plug>(easymotion-bd-f)
-map <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>g <Plug>(easymotion-bd-w)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
@@ -30,7 +30,7 @@ nnoremap <Leader><Leader>w :w<CR>
 "nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>p :bp<CR>
 nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>; :e#<CR>
 nnoremap <Leader>01 :1b<CR>
 nnoremap <Leader>02 :2b<CR>
@@ -96,6 +96,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 "Plugin 'junegunn/fzf'
 "Plugin 'WolfgangMehner/perl-support'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'rust-lang/rust.vim'
