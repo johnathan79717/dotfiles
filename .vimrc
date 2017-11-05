@@ -1,5 +1,6 @@
 let @y = 'ggyGG'
 let g:closetag_filenames = '*.html,*.js'
+let g:closetag_emptyTags_caseSensitive = 1
 let g:ycm_rust_src_path = '~/Workspace/rustc-1.13.0/src'
 set colorcolumn=81
 set hidden
@@ -7,10 +8,10 @@ let mapleader = "\<Space>"
 
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 1
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+map  <Leader>/ <Plug>(easymotion-sn)
+omap <Leader>/ <Plug>(easymotion-tn)
+map  <Leader>n <Plug>(easymotion-next)
+map  <Leader>N <Plug>(easymotion-prev)
 nmap <Leader>s <Plug>(easymotion-s2)
 map <Leader> <Plug>(easymotion-prefix)
 map <Leader>f <Plug>(easymotion-bd-f)
