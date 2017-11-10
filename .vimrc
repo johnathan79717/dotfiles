@@ -67,7 +67,7 @@ set ignorecase
 set smartcase
 let g:ycm_autoclose_preview_window_after_insertion = 1
 map <c-n> :NERDTreeToggle %<CR>
-"set hlsearch
+set hlsearch
 
 filetype plugin on
 let g:ycm_global_ycm_extra_conf ='~/.vim/.ycm_extra_conf.py'
@@ -115,6 +115,7 @@ Plugin 'fatih/vim-go'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'alvan/vim-closetag'
+Plugin 'danro/rename.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
