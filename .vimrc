@@ -1,17 +1,14 @@
 let @y = 'ggyGG'
-let g:closetag_filenames = '*.html,*.js'
+let g:closetag_filenames = '*.html,*.js,*.vue'
 let g:closetag_emptyTags_caseSensitive = 1
 let g:ycm_rust_src_path = '~/Workspace/rustc-1.13.0/src'
-set colorcolumn=81
+set colorcolumn=101
 set hidden
 let mapleader = "\<Space>"
 
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 1
-map  <Leader>/ <Plug>(easymotion-sn)
-omap <Leader>/ <Plug>(easymotion-tn)
-map  <Leader>n <Plug>(easymotion-next)
-map  <Leader>N <Plug>(easymotion-prev)
+map  / <Plug>(easymotion-sn)
 nmap <Leader>s <Plug>(easymotion-s2)
 map <Leader> <Plug>(easymotion-prefix)
 map <Leader>f <Plug>(easymotion-bd-f)
@@ -79,7 +76,9 @@ syntax on
 "let g:ctrlp_working_path_mode = 'c'
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab " convert tab to spaces
 set smarttab
 set nu
@@ -97,6 +96,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 "Plugin 'junegunn/fzf'
 "Plugin 'WolfgangMehner/perl-support'
+"Plugin 'HerringtonDarkholme/vim-worksheet'
+Plugin 'posva/vim-vue'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
